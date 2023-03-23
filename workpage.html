@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workpage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+          <li><a href="profile.html" >Profile</a></li>
+          <li><a href="#" class = "main-link">Workpage</a></li>
+        </ul>
+        <button type="submit" id="logout" onclick="location.href='index.html'">Log Out</button>
+      </nav>
+      <div class="contacts-container">
+        <div id="new-contact-wrap">
+          <p>Add new contact</p>
+          <form class = "new-contact">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+          
+            <label for="phone">Number:</label>
+            <input type="tel" id="phone" name="phone"><br>
+          
+            <button class="btn btn-submit">Create New Contact</button>
+        </form>
+        </div>
+        <div class="list-container">
+          <div class="search-container">
+            <input type="text" class="form-control" id="search" placeholder="Search">
+            <select class="form-control" id="sort">
+               <option value="" selected disabled hidden>Sort by</option>
+               <option>A-Z</option>
+               <option>Z-A</option>
+            </select>
+          </div>
+          <table class = "contacts">
+            <tr class="header-row">
+              <th>Name</th>
+              <th>Mail</th>
+              <th>Phone</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Example1</td>
+              <td>Example1</td>
+              <td>Example1</td>
+              <td>
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Example2</td>
+              <td>Example2</td>
+              <td>Example2</td>
+              <td>
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Example3</td>
+              <td>Example3</td>
+              <td>Example3</td>
+              <td>
+                <button class="btn btn-edit">Edit</button>
+                <button class="btn btn-delete">Delete</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+    </div>
+</body>
+</html>
