@@ -35,7 +35,7 @@ class LoginController
       } 
       else 
       {
-        this.view.showErrorMessage();
+        this.view.showErrorMessage("Invalid email or password");
       }
     });
   }
@@ -70,7 +70,7 @@ class LoginView
         return { email, password};
     }
 
-    showRegistrationError(message) 
+    showErrorMessage(message) 
     {
         this.registrationErrorMessage.style.display = 'block';
         this.registrationErrorMessage.textContent = message;
