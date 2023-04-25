@@ -269,6 +269,7 @@ class WorkpageModel
     {
       this.model.deleteContact(contact);
       this.view.renderTable(this.model.contacts);
+      this.updateEventListeners();
     }
     
   }
