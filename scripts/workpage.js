@@ -205,6 +205,7 @@ class WorkpageModel
       
         const newContact = this.model.addContact(name, email, phone);
         this.view.renderTable(this.model.contacts);
+        this.updateEventListeners();
       
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
