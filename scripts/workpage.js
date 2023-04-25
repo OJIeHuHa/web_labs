@@ -89,7 +89,7 @@ class WorkpageModel
             <td><input type="email" id="email-input" value="${contact.email}"></td>
             <td><input type="tel" id="phone-input" value="${contact.phone}"></td>
             <td><button class="btn btn-primary" data-contact='${JSON.stringify(contact)}'">Save</button></td>
-            <td><button class="btn btn-danger" data-contact='${JSON.stringify(contact)}'">Cancel</button></td>
+            <td><button class="btn btn-cancell btn-danger" data-contact='${JSON.stringify(contact)}'">Cancel</button></td>
           `;
         } 
         else 
@@ -205,6 +205,7 @@ class WorkpageModel
       
         const newContact = this.model.addContact(name, email, phone);
         this.view.renderTable(this.model.contacts);
+        this.updateEventListeners();
       
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
@@ -231,11 +232,11 @@ class WorkpageModel
     handleEdit(contact) 
     {
       
-      this.view.renderTable(this.model.getContacts(), contact);
+      this.view.renderTable(this.model.contacts, contact);
       console.log("handle-edit", this.model.contacts)
 
       const saveButton = document.querySelector('.btn-primary');
-      const cancelButton = document.querySelector('.btn-danger');
+      const cancelButton = document.querySelector('.btn-cancell');
 
       saveButton.addEventListener('click', () => 
       {
@@ -244,6 +245,7 @@ class WorkpageModel
 
       cancelButton.addEventListener('click', () => 
       {
+        console.log("cancell clicked");
           this.view.renderTable(this.model.contacts);
           this.updateEventListeners();
       });
@@ -268,6 +270,7 @@ class WorkpageModel
     {
       this.model.deleteContact(contact);
       this.view.renderTable(this.model.contacts);
+      this.updateEventListeners();
     }
     
   }
