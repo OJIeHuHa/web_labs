@@ -27,6 +27,7 @@ class LoginController
       const logindata = this.view.getFormData();
 
       const user = users.checkUser(logindata.email, logindata.password);
+      console.log(user)
       if (user) 
       {
         users.saveUsers();
@@ -35,7 +36,7 @@ class LoginController
       } 
       else 
       {
-        this.view.showErrorMessage();
+        this.view.showErrorMessage("Wrong email or password");
       }
     });
   }
@@ -45,10 +46,6 @@ class LoginController
     window.location.href = 'workpage.html';
   }
 
-  showErrorMessage() 
-  {
-    this.loginForm.appendChild(this.errorMessage);
-  }
 }
 
 class LoginView 
@@ -58,8 +55,7 @@ class LoginView
       this.loginForm = document.querySelector('#login-form');
       this.emailInput = document.querySelector('#email');
       this.passwordInput = document.querySelector('#password');
-      this.errorMessage = document.createElement('p');
-      this.errorMessage.classList.add('error-message');
+      this.errorMessage = document.querySelector('#login-error-message');
     }
 
     getFormData() 
@@ -70,10 +66,10 @@ class LoginView
         return { email, password};
     }
 
-    showRegistrationError(message) 
+    showErrorMessage(message) 
     {
-        this.registrationErrorMessage.style.display = 'block';
-        this.registrationErrorMessage.textContent = message;
+        this.errorMessage.style.display = 'block';
+        this.errorMessage.textContent = message;
     }
 }
 const view = new LoginView();
