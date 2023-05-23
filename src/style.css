@@ -40,6 +40,7 @@ body {
     background-color: #212529;
     width: 35%;
     margin: 0% auto;
+    
     text-align: center;
     padding: 1% 0 0 0;
     border-radius: 4px;
@@ -57,7 +58,7 @@ body {
   }
   #login-form,
   #registration-form {
-    padding: 0 4%;
+    padding: 0 6%;
   }
   
   input {
@@ -92,7 +93,7 @@ body {
   
     width: 100%;
     padding: 0 0 0 10px;
-    margin: 0;
+    margin: 10px 0 ;
     background-color: #495057;
     color: #000000;
     border: 1px solid #c2c0ca;
@@ -228,58 +229,6 @@ body {
 
 /* Navigation bar design */
 
-  .navbar {
-    background-color: #212529;
-    display: flex;
-    height: 55px;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 0;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar a {
-    display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    font-size:16px;
-  }
-  
-  .navbar a.active {
-    background-color: #212529;
-  }
-
-  .main-link {
-    background-color: #343a40;
-  }
-  
-  .main-link:hover {
-    background-color: #343a40;
-  }
-
-  .navbar a:not(.active):hover {
-    background-color: #666;
-  }
-  
-  #logout {
-    width:8em;
-    height:75%;
-    margin-bottom:0.5%;
-  }
 
 /* profile */
 
@@ -423,36 +372,3 @@ body {
 
 /* logo page */
 
-  .upper-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-    background-color:#6c757d;
-    width:100%;
-    height:10%;
-  }
-
-  .slogan-container {
-    margin:10%;
-    margin-top:5em;
-    margin-bottom:5%;
-    font-weight:bold;
-    font-size:50px;
-    display: flex;
-    flex-direction:column;
-    border-radius:40px;
-    position: relative;
-    color:#000000;
-  }
-  #try-out
-  {
-    margin-left:35%;
-    width:30%;
-  }
-
-  #login-logo {
-    width:5em;
-    margin-top:0.2%;
-    margin-bottom:0.5%;
-  }
